@@ -1,0 +1,190 @@
+
+% Pradeep Garigipati's Resume
+% Created: 14 Nov 2011
+% Last Modified: 14 Nov 2011
+
+\documentclass[11pt,oneside]{article}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=0.55in,bmargin=0.55in,lmargin=0.65in,rmargin=0.65in,headheight=0in,headsep=0in,footskip=.3in}
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% Name and contact information
+\newcommand{\name}{Pradeep Garigipati}
+\newcommand{\addr}{3902 College Main St., Apt 1510, Bryan, TX 77801}
+\newcommand{\phone}{(713) 732-9156}
+\newcommand{\email}{pradeep.garigipati@(tamu.edu/gmail.com)}
+\newcommand{\web}{http://students.cse.tamu.edu/garigipp/}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+  \begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+}
+
+% A ressection is a main section (<H1>Section</H1>)
+\newenvironment{ressection}[1]{
+  \vspace{4pt}
+  {\fontfamily{phv}\selectfont\Large#1}
+  \begin{itemize}
+  \vspace{3pt}
+}{
+  \end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+  \vspace{-4pt}
+  \item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+  \vspace{-1pt}
+  \item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location
+%  Arg 3: Title and/or date range
+\newcommand{\resbigitem}[4]{
+  \vspace{-5pt}
+  \item
+  \textbf{#1}, #2 \hfill #4\\
+  \textit{#3}
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[4]{
+  \resbigitem{#1}{#2}{#3}{#4}
+  \vspace{-2pt}
+  \begin{itemize}
+}{
+  \end{itemize}
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec2}[4]{
+  \resbigitem{#1}{#2}{#3}{#4}
+}
+  
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec_variant}[2]{
+  \resbigitem{#1}{#2}
+  \vspace{-2pt}
+  \begin{itemize}
+}{
+  \end{itemize}
+}
+
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+  \resitem{\textbf{#1}}
+  \vspace{-5pt}
+  \begin{itemize}
+}{
+  \end{itemize}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now for the actual document:
+
+\begin{document}
+\fontfamily{ppl} \selectfont
+% Name with horizontal rule
+\bigname{\name}  
+\begin{center} \web \end{center}
+\vspace{-8pt} \rule{\textwidth}{1pt}
+\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
+\vspace{8 pt}
+
+{\fontfamily{phv}\selectfont\Large Objective}\\
+Seeking a full time opportunity as a software development engineer.\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Education}
+  \begin{ressubsec}{Texas A\&M University}{College Station, Texas}{Master of Science in Computer Science (GPA: 3.64)}{Graduation Date: May 2013}
+    \ressubitem{Course Work: Computer Architecture, Algorithms \& Analysis, Parallel Computing, Geometric Modeling, Image Synthesis, Physics Based Simulation, Rendering \& Shading, and Image \& Video Processing.}
+  \end{ressubsec}
+%  \begin{ressubsec2}{Texas A\&M University}{College Station, Texas}{Master of Science in Computer Science (GPA: 3.64)}{Graduation Date: May 2013}
+%    \end{ressubsec2}
+  \begin{ressubsec2}{National Institute of Technology}{Durgapur, West Bengal, India.}{Bachelor of Technology in Computer Science and Engineering (GPA: 8.82/10)}{Graduation Date: May 2008}
+  \end{ressubsec2}
+\end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Skills}
+
+  \resitem{\textbf{Programming languages:} C/C++, Python, OpenGL, GLSL, RSL, Java, PL/SQL}
+  \resitem{\textbf{Frameworks:} Qt, Cinder, Pthreads, MPI, CUDA}
+  \resitem{\textbf{Web languages and frameworks:} HTML, CSS, J2EE Servlets, JavaScript}
+  \resitem{\textbf{Server platforms:} WebSphere Application Server V6.1, Apache}
+  \resitem{\textbf{Tools and Software:} Photoshop, HDR Shop, Matlab, \LaTeX{}}
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%  
+\begin{ressection}{Academic Projects}
+
+  \begin{reslist}{Texas A\&M University}
+      \ressubitem{Developed a Ray Tracing renderer with GUI interface.}
+            \ressubitem{Created a physics based simulation of bird flight.}
+      \ressubitem{Implemented a parallel algorithm to do Cholesky decomposition using MPI and CUDA.}
+            \ressubitem{Studied and implemented swept volume generation for three dimensional surfaces.}
+%      \ressubitem{Studied the concept of extent of generalization of APIs.}
+  \end{reslist}
+
+  \begin{reslist}{National Institute of Technology}
+      \ressubitem{Designed a Java GUI application which assists in drawing Data Flow Diagrams.}
+      \ressubitem{Developed an algorithm for bot-exploration on closed surfaces achieving a coverage of 59\%.}
+  \end{reslist}
+  
+\end{ressection}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Work Experience}
+
+  \begin{ressubsec2}{Visulization Department, Texas A\&M University}{College Station, TX}{Research Assistant}{September 2012 - Present}
+  \end{ressubsec2}
+
+   \begin{ressubsec2}{USC Institute of Creative Technologies}{Playa Vista, CA}{Visiting Research Assistant}{May 2012 - July 2012}
+   \end{ressubsec2}
+
+  \begin{ressubsec2}{Open Access Labs, Texas A\&M University}{College Station, TX}{Student Worker}{September 2011-April 2012}
+  \end{ressubsec2}
+
+  \begin{ressubsec2}{Tata Consultancy Services Limited}{Mumbai, India}{Assistant Systems Engineer}{July 2008-June 2010}
+  \end{ressubsec2}
+
+\end{ressection}
+
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Publications}
+	\resitem{Pradeep Garigipati, Ergun Akleman: Duotone Surfaces. International Symposium on Computational Aesthetics in Graphics, Visualization, and Imaging, 2012. Annecy, France. 99-106.}
+	\resitem{Yufeng Zhu, Pradeep Garigipati, Pieter Peers, Paul Debevec and Abhijeet Ghosh. Estimating Diffusion Parameters from Polarized Spherical GradientIllumination. IEEE Computer Graphics and Applications, 2013(To Appear).}
+\end{ressection}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Achievements and Activities}
+  
+%  \resitem{Contributed to the research work: 'Estimating Diffusion Parameters From Polarized Spherical Gradient Illumination', which was presented at SIGGRAPH 2012 Talks/Posters.}
+  \resitem{Completed IBM Certification as System Administrator, WebSphere Application Server Network Deployment V6.1.}
+  \resitem{Completed Green Belt Certification in Six Sigma.}
+  
+\end{ressection}
+\end{document}
