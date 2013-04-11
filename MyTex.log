@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.10)  16 MAR 2013 12:34
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.10)  11 APR 2013 09:26
 entering extended mode
 **MyTex.tex
-("D:\Dropbox\career\LaTeX Resume\MyTex.tex"
+("G:\Dropbox\career\LaTeX Resume\MyTex.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -69,7 +69,7 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-("D:\Dropbox\career\LaTeX Resume\MyTex.aux")
+("G:\Dropbox\career\LaTeX Resume\MyTex.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
 LaTeX Font Info:    ... okay on input line 100.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
@@ -126,29 +126,29 @@ LaTeX Font Info:    Try loading font information for T1+phv on input line 103.
 (D:\Programs\MikTex\tex\latex\psnfss\t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 109--111
+Underfull \hbox (badness 10000) in paragraph at lines 109--113
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 114.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 119.
 
 (D:\Programs\MikTex\tex\latex\psnfss\omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 114.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 114.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 119.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 130.
+(Font)              <10.95> on input line 176.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 130.
+(Font)              <8> on input line 176.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 130.
+(Font)              <6> on input line 176.
  [1
 
 {C:/Users/prady/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-("D:\Dropbox\career\LaTeX Resume\MyTex.aux") ) 
+("G:\Dropbox\career\LaTeX Resume\MyTex.aux") ) 
 Here is how much of TeX's memory you used:
  1096 strings out of 494045
  13442 string characters out of 3152014
@@ -156,7 +156,7 @@ Here is how much of TeX's memory you used:
  4416 multiletter control sequences out of 15000+200000
  29313 words of font info for 43 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 23i,4n,26p,256b,212s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 23i,4n,26p,410b,314s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Programs/MikTex/fonts/enc/dvi
 ps/cm-super/cm-super-t1.enc}{D:/Programs/MikTex/fonts/enc/dvips/fontname/8r.enc
 }<D:/Programs/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programs/Mik
@@ -164,7 +164,7 @@ Tex/fonts/type1/public/cm-super/sfbx1095.pfb><D:/Programs/MikTex/fonts/type1/ur
 w/helvetic/uhvr8a.pfb><D:/Programs/MikTex/fonts/type1/urw/palatino/uplb8a.pfb><
 D:/Programs/MikTex/fonts/type1/urw/palatino/uplr8a.pfb><D:/Programs/MikTex/font
 s/type1/urw/palatino/uplri8a.pfb>
-Output written on MyTex.pdf (2 pages, 81091 bytes).
+Output written on MyTex.pdf (2 pages, 80378 bytes).
 PDF statistics:
  35 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
