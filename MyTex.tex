@@ -1,0 +1,215 @@
+
+% Pradeep Garigipati's Resume
+% Created: 14 Nov 2011
+% Last Modified: 14 Nov 2011
+
+\documentclass[11pt,oneside]{article}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=0.55in,bmargin=0.55in,lmargin=0.65in,rmargin=0.65in,headheight=0in,headsep=0in,footskip=.3in}
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% Name and contact information
+\newcommand{\name}{Pradeep Garigipati}
+\newcommand{\addr}{3902 College Main St., Apt 1510, Bryan, TX 77801}
+\newcommand{\phone}{(713) 732-9156}
+\newcommand{\email}{pradeep.garigipati@(tamu.edu/gmail.com)}
+\newcommand{\web}{http://students.cse.tamu.edu/garigipp/}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+  \begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+}
+
+% A ressection is a main section (<H1>Section</H1>)
+\newenvironment{ressection}[1]{
+  \vspace{4pt}
+  {\fontfamily{phv}\selectfont\Large#1}
+  \begin{itemize}
+  \vspace{3pt}
+}{
+  \end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+  \vspace{-4pt}
+  \item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+  \vspace{-1pt}
+  \item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location
+%  Arg 3: Title and/or date range
+\newcommand{\resbigitem}[4]{
+  \vspace{-5pt}
+  \item
+  \textbf{#1}, #2 \hfill #4\\
+  \textit{#3}
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[4]{
+  \resbigitem{#1}{#2}{#3}{#4}
+  \vspace{-2pt}
+  \begin{itemize}
+}{
+  \end{itemize}
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec2}[4]{
+  \resbigitem{#1}{#2}{#3}{#4}
+}
+  
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec_variant}[2]{
+  \resbigitem{#1}{#2}
+  \vspace{-2pt}
+  \begin{itemize}
+}{
+  \end{itemize}
+}
+
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+  \resitem{\textbf{#1}}
+  \vspace{-5pt}
+  \begin{itemize}
+}{
+  \end{itemize}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now for the actual document:
+
+\begin{document}
+\fontfamily{ppl} \selectfont
+% Name with horizontal rule
+\bigname{\name}  
+\begin{center} \web \end{center}
+\vspace{-8pt} \rule{\textwidth}{1pt}
+\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
+\vspace{8 pt}
+
+{\fontfamily{phv}\selectfont\Large Objective}\\
+Seeking a full time opportunity as a software development engineer.\\
+%Seeking a full time opportunity as a graphics software engineer.\\
+%Seeking an internship opportunity.\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Education}
+%  \begin{ressubsec}{Texas A\&M University}{College Station, Texas}{Master of Science in Computer Science (GPA: 3.64)}{Graduation Date: May 2013}
+%    \ressubitem{Courses: Computer Architecture, Algorithms \& Analysis, Parallel Computing, Geometric Modeling, Image Synthesis, Physics Based Simulation, Rendering \& Shading, and Image \& Video Processing.}
+%  \end{ressubsec}
+  \begin{ressubsec2}{Texas A\&M University}{College Station, Texas}{Master of Science in Computer Science (GPA: 3.64)}{Graduation Date: May 2013}
+    \end{ressubsec2}
+  \begin{ressubsec2}{National Institute of Technology}{Durgapur, West Bengal, India.}{Bachelor of Technology in Computer Science and Engineering (GPA: 8.82/10)}{Graduation Date: May 2008}
+  \end{ressubsec2}
+\end{ressection}
+
+
+%\begin{ressection}{Work Experience}
+%
+%  \begin{ressubsec}{Visulization Department, Texas A\&M University}{College Station, TX}{Research Assistant}{September 2012 - Present}
+%  		\ressubitem{Working on an image processing application to handle foreground-background separation. The application has client-server architecture where the clients are typically mobile devices. Apart from designing the imaging application, other server related processes like configuring the server and developing the web application are also a part of my responsibilities.}
+%  \end{ressubsec}
+%
+%   \begin{ressubsec}{USC Institute of Creative Technologies}{Playa Vista, CA}{Visiting Research Assistant}{May 2012 - July 2012}
+%     	\ressubitem{Worked on the analysis and extraction of subsurface scattering parameters of an object using only four photographs that are taken under controlled lighting conditions.}
+%   \end{ressubsec}
+%
+%  \begin{ressubsec}{Open Access Labs, Texas A\&M University}{College Station, TX}{Student Worker}{September 2011-April 2012}
+%  		\ressubitem{Provide solutions to computer related issues faced by the students in the computer lab.}
+%  \end{ressubsec}
+%
+%  \begin{ressubsec}{Tata Consultancy Services Limited}{Mumbai, India}{Assistant Systems Engineer}{July 2008-June 2010}
+%  		\ressubitem{Roles: WebSphere Application ServerV6.1 administration, Production support for the web applications deployed on the WebSphere server.}
+%  		\ressubitem{Automated application deployment on the client server using Jython scripting which decreased the app deployment time and significantly reduced the monetary resources required for the task.}
+%  \end{ressubsec}
+%
+%\end{ressection}
+\begin{ressection}{Work Experience}
+
+  \begin{ressubsec}{Tata Consultancy Services Limited}{Mumbai, India}{Assistant Systems Engineer}{July 2008-June 2010}
+  		\ressubitem{Roles: WebSphere Application ServerV6.1 administration, Production support for the web applications deployed on the WebSphere server.}
+  		\ressubitem{Automated application deployment on the client server using Jython scripting which decreased the app deployment time and significantly reduced the monetary resources required for the task.}
+  \end{ressubsec}
+  
+    \begin{ressubsec}{Open Access Labs, Texas A\&M University}{College Station, TX}{Student Worker}{September 2011-April 2012}
+    		\ressubitem{Provide solutions to computer related issues faced by the students in the computer lab.}
+    \end{ressubsec}
+  
+     \begin{ressubsec}{USC Institute of Creative Technologies}{Playa Vista, CA}{Visiting Research Assistant}{May 2012 - July 2012}
+       	\ressubitem{Worked on the analysis and extraction of subsurface scattering parameters of an object using only four photographs that are taken under controlled lighting conditions.}
+     \end{ressubsec}
+  
+    \begin{ressubsec}{Visulization Department, Texas A\&M University}{College Station, TX}{Research Assistant}{September 2012 - Present}
+    		\ressubitem{Working on an image processing application to handle foreground-background separation. The application has client-server architecture where the clients are typically mobile devices. Apart from designing the imaging application, other server related processes like configuring the server and developing the web application are also a part of my responsibilities.}
+    \end{ressubsec}
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Skills}
+
+  \resitem{\textbf{Programming languages:} C/C++(proficient), Python(prior experience), OpenGL(proficient), GLSL(proficient), Java(prior experience), PL/SQL(prior experience)}
+  \resitem{\textbf{Frameworks and libraries:} Qt(proficient), Cinder(coursework), Pthreads(prior experience), MPI(coursework), CUDA(coursework)}
+  \resitem{\textbf{Web languages and frameworks:} HTML(prior experience), CSS(prior experience), J2EE Servlets(prior experience), JavaScript(beginner)}
+  \resitem{\textbf{Server platforms:} WebSphere Application Server V6.1(prior experience), Apache(prior experience)}
+    \resitem{\textbf{Database platforms:} MySQL(prior experience)}
+  \resitem{\textbf{Tools and softwares:} Photoshop(beginner), HDR Shop(intermediate), Matlab(beginner), Maple(coursework), \LaTeX{}(intermediate)}
+
+\end{ressection}
+
+%\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%  
+\begin{ressection}{Academic Projects}
+
+  \begin{reslist}{Texas A\&M University}
+      \ressubitem{Course Project: Created an animation video for Rendering and shading class. Please find the video at the URL: http://vimeo.com/41204737}
+      \ressubitem{Course project: Developed a ray tracing renderer application with GUI interface using Qt and C++.}
+      \ressubitem{Course project: Created a physics based simulation of bird flight using Cinder and C++.}
+      \ressubitem{Course project: Implemented a parallel algorithm to do Cholesky decomposition using MPI and CUDA.}
+      \ressubitem{Course project: Studied and implemented swept volume generation for three dimensional surfaces using Maple.}
+  \end{reslist}
+
+  \begin{reslist}{National Institute of Technology}
+      \ressubitem{Independent project: Designed a Java GUI application which assists in drawing Data Flow Diagrams.}
+      \ressubitem{Independent project: Developed an algorithm for bot-exploration on closed surfaces using C++.}
+  \end{reslist}
+  
+\end{ressection}  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{ressection}{Publications}
+%	\resitem{Pradeep Garigipati, Ergun Akleman: Duotone Surfaces. International Symposium on Computational Aesthetics in Graphics, Visualization, and Imaging, 2012. Annecy, France. 99-106.}
+%	\resitem{Yufeng Zhu, Pradeep Garigipati, Pieter Peers, Paul Debevec and Abhijeet Ghosh. Estimating Diffusion Parameters from Polarized Spherical GradientIllumination. IEEE Computer Graphics and Applications, 2013(To Appear).}
+%\end{ressection}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Achievements}
+  \resitem{Completed IBM Certification as System Administrator, WebSphere Application Server Network Deployment V6.1.}
+  \resitem{Completed Green Belt Certification in Six Sigma.}
+  
+\end{ressection}
+\end{document}
