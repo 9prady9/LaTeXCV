@@ -16,10 +16,10 @@
 
 % Name and contact information
 \newcommand{\name}{Pradeep Garigipati}
-\newcommand{\addr}{3902 College Main St., Apt 1510, Bryan, TX 77801}
-\newcommand{\phone}{(713) 732-9156}
-\newcommand{\email}{pradeep.garigipati@(tamu.edu/gmail.com)}
-\newcommand{\web}{http://students.cse.tamu.edu/garigipp/}
+\newcommand{\addr}{2-46-17/A, Venkat Nagar, Kakinada, AP, India 533003}
+\newcommand{\phone}{+91-9505318097}
+\newcommand{\email}{pradeep.garigipati@gmail.com}
+\newcommand{\web}{https://www.linkedin.com/in/pradeepgarigipati}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % New commands and environments
@@ -39,6 +39,12 @@
   \end{itemize}
 }
 
+\newenvironment{ressectionlist}[1]{
+	\vspace{4pt}
+	{\fontfamily{phv}\selectfont\Large#1}
+	\vspace{4pt}
+}
+
 % A resitem is a simple list element in a ressection (first level)
 \newcommand{\resitem}[1]{
   \vspace{-4pt}
@@ -48,41 +54,24 @@
 % A ressubitem is a simple list element in anything but a ressection (second level)
 \newcommand{\ressubitem}[1]{
   \vspace{-1pt}
-  \item \begin{flushleft} #1 \end{flushleft}
+  \item [$\square$] \begin{flushleft} #1 \end{flushleft}
 }
 
 % A resbigitem is a complex list element for stuff like jobs and education:
 %  Arg 1: Name of company or university
 %  Arg 2: Location
 %  Arg 3: Title and/or date range
-\newcommand{\resbigitem}[4]{
+\newcommand{\resbigitem}[3]{
   \vspace{-5pt}
   \item
-  \textbf{#1}, #2 \hfill #4\\
-  \textit{#3}
+  \textbf{#1}\\
+  \textnormal #2 | #3
 }
 
 % This is a list that comes with a resbigitem
-\newenvironment{ressubsec}[4]{
-  \resbigitem{#1}{#2}{#3}{#4}
-  \vspace{-2pt}
-  \begin{itemize}
-}{
-  \end{itemize}
-}
-
-% This is a list that comes with a resbigitem
-\newenvironment{ressubsec2}[4]{
-  \resbigitem{#1}{#2}{#3}{#4}
-}
-  
-% This is a list that comes with a resbigitem
-\newenvironment{ressubsec_variant}[2]{
-  \resbigitem{#1}{#2}
-  \vspace{-2pt}
-  \begin{itemize}
-}{
-  \end{itemize}
+% but has normal text instead of sublist
+\newenvironment{ressubsec3}[3]{
+	\resbigitem{#1}{#2}{#3}
 }
 
 % This is a simple sublist
@@ -94,122 +83,122 @@
   \end{itemize}
 }
 
+\newenvironment{blockquote}{%
+	\par%
+	\medskip
+	\leftskip=2em\rightskip=2em%
+	\noindent\ignorespaces}{%
+	\par\medskip}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Now for the actual document:
+% Now the actual document:
 
 \begin{document}
 \fontfamily{ppl} \selectfont
 % Name with horizontal rule
 \bigname{\name}  
-\begin{center} \web \end{center}
+\begin{center} 
+	\web \\
+	\phone \\
+	\email
+\end{center}
 \vspace{-8pt} \rule{\textwidth}{1pt}
-\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
-\vspace{8 pt}
 
-{\fontfamily{phv}\selectfont\Large Objective}\\
-Seeking a full time opportunity as a software development engineer.\\
-%Seeking a full time opportunity as a graphics software engineer.\\
-%Seeking an internship opportunity.\\
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Education}
-%  \begin{ressubsec}{Texas A\&M University}{College Station, Texas}{Master of Science in Computer Science (GPA: 3.64)}{Graduation Date: May 2013}
-%    \ressubitem{Courses: Computer Architecture, Algorithms \& Analysis, Parallel Computing, Geometric Modeling, Image Synthesis, Physics Based Simulation, Rendering \& Shading, and Image \& Video Processing.}
-%  \end{ressubsec}
-  \begin{ressubsec2}{Texas A\&M University}{College Station, Texas}{Master of Science in Computer Science (GPA: 3.64)}{Graduation Date: May 2013}
-    \end{ressubsec2}
-  \begin{ressubsec2}{National Institute of Technology}{Durgapur, West Bengal, India.}{Bachelor of Technology in Computer Science and Engineering (GPA: 8.82/10)}{Graduation Date: May 2008}
-  \end{ressubsec2}
+\begin{ressectionlist}{SKILLS}
+	
+	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill} } l l l }
+		Software Development & Requirements Analysis & OOAD \& RAD\\
+		Coding \& Scripting & Testing \& Documentation & Debugging \& Troubleshooting\\
+		GUI Design & User Training \& Support & \\
+	\end{tabular*}
+	\newline
+\end{ressectionlist}
+
+
+\begin{ressection}{TECHNOLOGY SUMMARY}
+	
+	\resitem{\textbf{Programming:} C/C++(proficient), OpenGL(proficient), GLSL(proficient), Rust(proficient), CUDA(proficient), OpenCL(proficient), MPI(beginner), Python(intermediate), Qt(proficient), Cinder(beginner), Git(proficient), Android(beginner)}
+	
+	\resitem{\textbf{Software Tools:} GIMP(intermediate), Photoshop(beginner), HDR Shop(intermediate), Matlab(beginner), \LaTeX{}(intermediate), Maya(beginner), Renderman(beginner)}
+	
 \end{ressection}
 
 
-%\begin{ressection}{Work Experience}
-%
-%  \begin{ressubsec}{Visulization Department, Texas A\&M University}{College Station, TX}{Research Assistant}{September 2012 - Present}
-%  		\ressubitem{Working on an image processing application to handle foreground-background separation. The application has client-server architecture where the clients are typically mobile devices. Apart from designing the imaging application, other server related processes like configuring the server and developing the web application are also a part of my responsibilities.}
-%  \end{ressubsec}
-%
-%   \begin{ressubsec}{USC Institute of Creative Technologies}{Playa Vista, CA}{Visiting Research Assistant}{May 2012 - July 2012}
-%     	\ressubitem{Worked on the analysis and extraction of subsurface scattering parameters of an object using only four photographs that are taken under controlled lighting conditions.}
-%   \end{ressubsec}
-%
-%  \begin{ressubsec}{Open Access Labs, Texas A\&M University}{College Station, TX}{Student Worker}{September 2011-April 2012}
-%  		\ressubitem{Provide solutions to computer related issues faced by the students in the computer lab.}
-%  \end{ressubsec}
-%
-%  \begin{ressubsec}{Tata Consultancy Services Limited}{Mumbai, India}{Assistant Systems Engineer}{July 2008-June 2010}
-%  		\ressubitem{Roles: WebSphere Application ServerV6.1 administration, Production support for the web applications deployed on the WebSphere server.}
-%  		\ressubitem{Automated application deployment on the client server using Jython scripting which decreased the app deployment time and significantly reduced the monetary resources required for the task.}
-%  \end{ressubsec}
-%
-%\end{ressection}
-\begin{ressection}{Work Experience}
+\begin{ressection}{EXPERIENCE}
+  \begin{ressubsec3}{Independent Software Developer}{Self-Employed}{Dec 2015 - Present}
+  	\begin{blockquote}
+  		Core Services: CUDA, OpenCL \& OpenGL programming. Currently, working for ArrayFire.
+	\end{blockquote}
+  \end{ressubsec3}
+  
+  \begin{ressubsec3}{Sr. Software Engineer}{ArrayFire}{Jun 2013 - Nov 2015}
+  	\begin{blockquote}
+  		Development and maintaince of ArrayFire library. Worked on Porting \& optimisation projects using CUDA/OpenCL/ArrayFire such as the following:
+  		\begin{itemize}
+  			\item[$\diamond$] OpenGL rendering tool with MEX interface.
+  			\item[$\diamond$] Real-time video processing engine with Qt-GUI and OpenCL compute backend.
+  		\end{itemize}
+  	\end{blockquote}
+  \end{ressubsec3}
+  
+  \begin{ressubsec3}{Graphics Programmer}{Visualization Department, Texas A\&M University}{Sep 2012 - Apr 2013}
+  	
+  	\begin{blockquote}
+  		Worked on an image processing application to handle foreground-background separation.
+  	\end{blockquote}
+  	
+  \end{ressubsec3}
 
-  \begin{ressubsec}{Tata Consultancy Services Limited}{Mumbai, India}{Assistant Systems Engineer}{July 2008-June 2010}
-  		\ressubitem{Roles: WebSphere Application ServerV6.1 administration, Production support for the web applications deployed on the WebSphere server.}
-  		\ressubitem{Automated application deployment on the client server using Jython scripting which decreased the app deployment time and significantly reduced the monetary resources required for the task.}
-  \end{ressubsec}
-  
-    \begin{ressubsec}{Open Access Labs, Texas A\&M University}{College Station, TX}{Student Worker}{September 2011-April 2012}
-    		\ressubitem{Provide solutions to computer related issues faced by the students in the computer lab.}
-    \end{ressubsec}
-  
-     \begin{ressubsec}{USC Institute of Creative Technologies}{Playa Vista, CA}{Visiting Research Assistant}{May 2012 - July 2012}
-       	\ressubitem{Worked on the analysis and extraction of subsurface scattering parameters of an object using only four photographs that are taken under controlled lighting conditions.}
-     \end{ressubsec}
-  
-    \begin{ressubsec}{Visulization Department, Texas A\&M University}{College Station, TX}{Research Assistant}{September 2012 - Present}
-    		\ressubitem{Working on an image processing application to handle foreground-background separation. The application has client-server architecture where the clients are typically mobile devices. Apart from designing the imaging application, other server related processes like configuring the server and developing the web application are also a part of my responsibilities.}
-    \end{ressubsec}
+  \begin{ressubsec3}{Rendering Programmer}{USC Institute of Creative Technologies}{May 2012 - Jul 2012}
+  	
+  	\begin{blockquote}
+  		Worked on the analysis and extraction of subsurface-scattering parameters for an object.This work is published in IEEE Computer Graphics and Applications special issue.
+    \end{blockquote}
+    
+  \end{ressubsec3}
+
+  \begin{ressubsec3}{Help Desk Assistant}{Open Access Labs, Texas A\&M University}{Sep 2011 - Apr 2012}  	
+  \end{ressubsec3}
+
+  \begin{ressubsec3}{Assistant Systems Engineer}{Tata Consultancy Services Limited}{Jul 2008 - Jun 2010}  	
+  	
+  	\begin{blockquote}
+  		Provided production support for the web applications deployed on WebSphere Application Server. Automated app deployment on servers, drastically reducing the costs associated.
+    \end{blockquote}
+  	
+  \end{ressubsec3}
 
 \end{ressection}
 
+\newpage
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Skills}
-
-  \resitem{\textbf{Programming languages:} C/C++(proficient), Python(prior experience), OpenGL(proficient), GLSL(proficient), Java(prior experience), PL/SQL(prior experience)}
-  \resitem{\textbf{Frameworks and libraries:} Qt(proficient), Cinder(coursework), Pthreads(prior experience), MPI(coursework), CUDA(coursework)}
-  \resitem{\textbf{Web languages and frameworks:} HTML(prior experience), CSS(prior experience), J2EE Servlets(prior experience), JavaScript(beginner)}
-  \resitem{\textbf{Server platforms:} WebSphere Application Server V6.1(prior experience), Apache(prior experience)}
-    \resitem{\textbf{Database platforms:} MySQL(prior experience)}
-  \resitem{\textbf{Tools and softwares:} Photoshop(beginner), HDR Shop(intermediate), Matlab(beginner), Maple(coursework), \LaTeX{}(intermediate)}
-
+\begin{ressection}{EDUCATION}
+	
+	\begin{ressubsec3}{Master of Science in Computer Science}{Texas A\&M University, College Station}{May 2013}
+	\end{ressubsec3}
+	
+	\begin{ressubsec3}{Bachelor of Technology in Computer Science and Engineering}{National Institute of Technology, Durgapur, India}{May 2008}
+	\end{ressubsec3}
+	
 \end{ressection}
 
-%\newpage
 
-%%%%%%%%%%%%%%%%%%%%%%%%  
-\begin{ressection}{Academic Projects}
-
-  \begin{reslist}{Texas A\&M University}
-      \ressubitem{Course Project: Created an animation video for Rendering and shading class. Please find the video at the URL: http://vimeo.com/41204737}
-      \ressubitem{Course project: Developed a ray tracing renderer application with GUI interface using Qt and C++.}
-      \ressubitem{Course project: Created a physics based simulation of bird flight using Cinder and C++.}
-      \ressubitem{Course project: Implemented a parallel algorithm to do Cholesky decomposition using MPI and CUDA.}
-      \ressubitem{Course project: Studied and implemented swept volume generation for three dimensional surfaces using Maple.}
-  \end{reslist}
-
-  \begin{reslist}{National Institute of Technology}
-      \ressubitem{Independent project: Designed a Java GUI application which assists in drawing Data Flow Diagrams.}
-      \ressubitem{Independent project: Developed an algorithm for bot-exploration on closed surfaces using C++.}
-  \end{reslist}
-  
-\end{ressection}  
+\begin{ressection}{PUBLICATIONS}
+	
+	\resitem{Pradeep Garigipati, Ergun Akleman: Duotone Surfaces. International Symposium on Computational Aesthetics in Graphics, Visualization, and Imaging, 2012. Annecy, France. 99-106.}
+	
+	\resitem{Yufeng Zhu, Pradeep Garigipati, Pieter Peers, Paul Debevec and Abhijeet Ghosh. Estimating Diffusion Parameters from Polarized Spherical GradientIllumination. IEEE Computer Graphics and Applications, 2013(To Appear).}
+	
+\end{ressection}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{ressection}{Publications}
-%	\resitem{Pradeep Garigipati, Ergun Akleman: Duotone Surfaces. International Symposium on Computational Aesthetics in Graphics, Visualization, and Imaging, 2012. Annecy, France. 99-106.}
-%	\resitem{Yufeng Zhu, Pradeep Garigipati, Pieter Peers, Paul Debevec and Abhijeet Ghosh. Estimating Diffusion Parameters from Polarized Spherical GradientIllumination. IEEE Computer Graphics and Applications, 2013(To Appear).}
-%\end{ressection}
+\begin{ressection}{CERTIFICATIONS}
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Achievements}
   \resitem{Completed IBM Certification as System Administrator, WebSphere Application Server Network Deployment V6.1.}
+
   \resitem{Completed Green Belt Certification in Six Sigma.}
   
 \end{ressection}
+
 \end{document}
