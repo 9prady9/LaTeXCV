@@ -5,6 +5,7 @@
 
 \documentclass[11pt,oneside]{article}
 \usepackage{geometry}
+\usepackage{hyperref}
 \usepackage[T1]{fontenc}
 \pagestyle{empty}
 \geometry{letterpaper,tmargin=0.55in,bmargin=0.55in,lmargin=0.65in,rmargin=0.65in,headheight=0in,headsep=0in,footskip=.3in}
@@ -14,12 +15,14 @@
 \setlength{\topsep}{0in}
 \setlength{\tabcolsep}{0in}
 
+\hypersetup{
+	colorlinks=true,       % false: boxed links; true: colored links
+	urlcolor=blue           % color of external links
+}
+
 % Name and contact information
 \newcommand{\name}{Pradeep Garigipati}
-\newcommand{\addr}{2-46-17/A, Venkat Nagar, Kakinada, AP, India 533003}
-\newcommand{\phone}{+91-9505318097}
-\newcommand{\email}{pradeep.garigipati@gmail.com}
-\newcommand{\web}{https://www.linkedin.com/in/pradeepgarigipati}
+\newcommand{\web}{\href{https://www.linkedin.com/in/pradeepgarigipati}{LinkedIn} , \href{https://github.com/9prady9}{GitHub}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % New commands and environments
@@ -64,8 +67,7 @@
 \newcommand{\resbigitem}[3]{
   \vspace{-5pt}
   \item
-  \textbf{#1}\\
-  \textnormal #2 | #3
+  \textbf{#1}, \textnormal #2 \hfill #3
 }
 
 % This is a list that comes with a resbigitem
@@ -98,9 +100,7 @@
 % Name with horizontal rule
 \bigname{\name}  
 \begin{center} 
-	\web \\
-	\phone \\
-	\email
+	\web
 \end{center}
 \vspace{-8pt} \rule{\textwidth}{1pt}
 
@@ -108,37 +108,32 @@
 \begin{ressectionlist}{SKILLS}
 	
 	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill} } l l l }
-		Software Development & Requirements Analysis & OOAD \& RAD\\
-		Coding \& Scripting & Testing \& Documentation & Debugging \& Troubleshooting\\
-		GUI Design & User Training \& Support & \\
+		Requirements Analysis & Software Development & Coding \& Testing\\
+        Documentation & Debugging \& Troubleshooting & User Training \& Support \\
 	\end{tabular*}
 	\newline
 \end{ressectionlist}
 
 
-\begin{ressection}{TECHNOLOGY SUMMARY}
+\begin{ressection}{TECHNOLOGY}
 	
-	\resitem{\textbf{Programming:} C/C++(proficient), OpenGL(proficient), GLSL(proficient), Rust(proficient), CUDA(proficient), OpenCL(proficient), MPI(beginner), Python(intermediate), Qt(proficient), Cinder(beginner), Git(proficient), Android(beginner)}
+	\resitem{\textbf{Programming:} C/C++(proficient), OpenGL(proficient), GLSL(proficient), Rust(proficient), CUDA(proficient), OpenCL(proficient), MPI(beginner), Python(intermediate), Qt(proficient), Git(proficient), Android(beginner)}
 	
-	\resitem{\textbf{Software Tools:} GIMP(intermediate), Photoshop(beginner), HDR Shop(intermediate), Matlab(beginner), \LaTeX{}(intermediate), Maya(beginner), Renderman(beginner)}
+	\resitem{\textbf{Software Tools:} GIMP(intermediate), Photoshop(beginner), Matlab(beginner), \LaTeX{}(intermediate), Maya(beginner)}
 	
 \end{ressection}
 
 
 \begin{ressection}{EXPERIENCE}
-  \begin{ressubsec3}{Independent Software Developer}{Self-Employed}{Dec 2015 - Present}
+  \begin{ressubsec3}{Freelance Software Developer}{Self-Employed}{Dec 2015 - Present}
   	\begin{blockquote}
-  		Core Services: CUDA, OpenCL \& OpenGL programming. Currently, working for ArrayFire.
+  		Core Services: CUDA, OpenCL \& OpenGL programming.
 	\end{blockquote}
   \end{ressubsec3}
   
   \begin{ressubsec3}{Sr. Software Engineer}{ArrayFire}{Jun 2013 - Nov 2015}
   	\begin{blockquote}
-  		Development and maintenance of ArrayFire library. Worked on Porting \& optimisation projects using CUDA/OpenCL/ArrayFire such as the following:
-  		\begin{itemize}
-  			\item[$\diamond$] OpenGL rendering tool with MEX interface.
-  			\item[$\diamond$] Real-time video processing engine with Qt-GUI and OpenCL compute backend.
-  		\end{itemize}
+  		Development and maintenance of ArrayFire library. Worked on Porting \& performance optimization projects involving CUDA/OpenCL/ArrayFire.
   	\end{blockquote}
   \end{ressubsec3}
   
@@ -171,34 +166,23 @@
 
 \end{ressection}
 
-\newpage
 
 \begin{ressection}{EDUCATION}
 	
-	\begin{ressubsec3}{Master of Science in Computer Science}{Texas A\&M University, College Station}{May 2013}
+	\begin{ressubsec3}{M.S. in Computer Science}{Texas A\&M University, College Station}{May 2013}
 	\end{ressubsec3}
 	
-	\begin{ressubsec3}{Bachelor of Technology in Computer Science and Engineering}{National Institute of Technology, Durgapur, India}{May 2008}
+	\begin{ressubsec3}{B. Tech. in Computer Science and Engineering}{NIT-Durgapur, India}{May 2008}
 	\end{ressubsec3}
 	
 \end{ressection}
-
 
 \begin{ressection}{PUBLICATIONS}
 	
 	\resitem{Pradeep Garigipati, Ergun Akleman: Duotone Surfaces. International Symposium on Computational Aesthetics in Graphics, Visualization, and Imaging, 2012. Annecy, France. 99-106.}
 	
-	\resitem{Yufeng Zhu, Pradeep Garigipati, Pieter Peers, Paul Debevec and Abhijeet Ghosh. Estimating Diffusion Parameters from Polarized Spherical GradientIllumination. IEEE Computer Graphics and Applications, 2013(To Appear).}
+	\resitem{Yufeng Zhu, Pradeep Garigipati, Pieter Peers, Paul Debevec and Abhijeet Ghosh. Estimating Diffusion Parameters from Polarized Spherical GradientIllumination. IEEE Computer Graphics and Applications, 2013.}
 	
-\end{ressection}
-
-
-\begin{ressection}{CERTIFICATIONS}
-
-  \resitem{Completed IBM Certification as System Administrator, WebSphere Application Server Network Deployment V6.1.}
-
-  \resitem{Completed Green Belt Certification in Six Sigma.}
-  
 \end{ressection}
 
 \end{document}
