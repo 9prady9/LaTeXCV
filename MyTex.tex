@@ -16,8 +16,8 @@
 \setlength{\tabcolsep}{0in}
 
 \hypersetup{
-	colorlinks=true,       % false: boxed links; true: colored links
-	urlcolor=blue           % color of external links
+  colorlinks=true,       % false: boxed links; true: colored links
+  urlcolor=blue           % color of external links
 }
 
 % Name and contact information
@@ -43,9 +43,9 @@
 }
 
 \newenvironment{ressectionlist}[1]{
-	\vspace{4pt}
-	{\fontfamily{phv}\selectfont\Large#1}
-	\vspace{4pt}
+  \vspace{4pt}
+  {\fontfamily{phv}\selectfont\Large#1}
+  \vspace{4pt}
 }
 
 % A resitem is a simple list element in a ressection (first level)
@@ -73,7 +73,7 @@
 % This is a list that comes with a resbigitem
 % but has normal text instead of sublist
 \newenvironment{ressubsec3}[3]{
-	\resbigitem{#1}{#2}{#3}
+  \resbigitem{#1}{#2}{#3}
 }
 
 % This is a simple sublist
@@ -86,11 +86,11 @@
 }
 
 \newenvironment{blockquote}{%
-	\par%
-	\medskip
-	\leftskip=2em\rightskip=2em%
-	\noindent\ignorespaces}{%
-	\par\medskip}
+  \par%
+  \medskip
+  \leftskip=2em\rightskip=2em%
+  \noindent\ignorespaces}{%
+  \par\medskip}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Now the actual document:
@@ -98,91 +98,91 @@
 \begin{document}
 \fontfamily{ppl} \selectfont
 % Name with horizontal rule
-\bigname{\name}  
-\begin{center} 
-	\web
+\bigname{\name}
+\begin{center}
+  \web
 \end{center}
 \vspace{-8pt} \rule{\textwidth}{1pt}
 
 
 \begin{ressectionlist}{SKILLS}
-	
-	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill} } l l l }
-		Requirements Analysis & Software Development & Coding \& Testing\\
-        Documentation & Debugging \& Troubleshooting & User Training \& Support \\
-	\end{tabular*}
-	\newline
+
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill} } l l l }
+    Requirements Analysis & Software Development & Coding \& Testing\\
+        Documentation & Debugging \& Troubleshooting & Performance Optimization \\
+  \end{tabular*}
+  \newline
 \end{ressectionlist}
 
 
 \begin{ressection}{TECHNOLOGY}
-	
-	\resitem{\textbf{Programming:} C/C++(proficient), OpenGL(proficient), GLSL(proficient), Rust(proficient), CUDA(proficient), OpenCL(proficient), MPI(beginner), Python(intermediate), Qt(proficient), Git(proficient), Android(beginner)}
-	
-	\resitem{\textbf{Software Tools:} GIMP(intermediate), Photoshop(beginner), Matlab(beginner), \LaTeX{}(intermediate), Maya(beginner)}
-	
+
+  \resitem{\textbf{Programming:} C/C++(proficient), OpenGL(proficient), GLSL(proficient), Rust(proficient), CUDA(proficient), OpenCL(proficient), MPI(beginner), Python(intermediate), Qt(proficient), Git(proficient), Android(beginner), Vulkan(beginner)}
+
+  \resitem{\textbf{Tools \& Frameworks:} docker(intermediate), GIMP(intermediate), Photoshop(beginner), Matlab(beginner), \LaTeX{}(intermediate), Maya(beginner)}
+
 \end{ressection}
 
 
 \begin{ressection}{EXPERIENCE}
   \begin{ressubsec3}{Freelance Software Developer}{Self-Employed}{Dec 2015 - Present}
-  	\begin{blockquote}
-  		Core Services: CUDA, OpenCL \& OpenGL programming.
-	\end{blockquote}
+    \begin{blockquote}
+      Core Services: Software Development, Performance Optimization, Porting
+  \end{blockquote}
   \end{ressubsec3}
-  
+
   \begin{ressubsec3}{Sr. Software Engineer}{ArrayFire}{Jun 2013 - Nov 2015}
-  	\begin{blockquote}
-  		Development and maintenance of ArrayFire library. Worked on Porting \& performance optimization projects involving CUDA/OpenCL/ArrayFire.
-  	\end{blockquote}
+    \begin{blockquote}
+      Development and maintenance of ArrayFire library. Worked on Porting \& performance optimization projects involving CUDA/OpenCL/ArrayFire/OpenGL technologies.
+    \end{blockquote}
   \end{ressubsec3}
-  
+
   \begin{ressubsec3}{Graphics Programmer}{Visualization Department, Texas A\&M University}{Sep 2012 - Apr 2013}
-  	
-  	\begin{blockquote}
-  		Worked on an image processing application to handle foreground-background separation.
-  	\end{blockquote}
-  	
+
+    \begin{blockquote}
+      Worked on an image processing application to handle foreground-background separation.
+    \end{blockquote}
+
   \end{ressubsec3}
 
   \begin{ressubsec3}{Rendering Programmer}{USC Institute of Creative Technologies}{May 2012 - Jul 2012}
-  	
-  	\begin{blockquote}
-  		Worked on the analysis and extraction of subsurface-scattering parameters for an object.This work is published in IEEE Computer Graphics and Applications special issue.
+
+    \begin{blockquote}
+      Worked on the analysis and extraction of subsurface-scattering parameters for an object.This work is published in IEEE Computer Graphics and Applications special issue.
     \end{blockquote}
-    
+
   \end{ressubsec3}
 
-  \begin{ressubsec3}{Help Desk Assistant}{Open Access Labs, Texas A\&M University}{Sep 2011 - Apr 2012}  	
+  \begin{ressubsec3}{Help Desk Assistant}{Open Access Labs, Texas A\&M University}{Sep 2011 - Apr 2012}
   \end{ressubsec3}
 
-  \begin{ressubsec3}{Assistant Systems Engineer}{Tata Consultancy Services Limited}{Jul 2008 - Jun 2010}  	
-  	
-  	\begin{blockquote}
-  		Provided production support for the web applications deployed on WebSphere Application Server. Automated app deployment on servers, drastically reducing the costs associated.
+  \begin{ressubsec3}{Assistant Systems Engineer}{Tata Consultancy Services Limited}{Jul 2008 - Jun 2010}
+
+    \begin{blockquote}
+      Provided production support for the web applications deployed on WebSphere Application Server. Automated app deployment on servers, drastically reducing the costs associated.
     \end{blockquote}
-  	
+
   \end{ressubsec3}
 
 \end{ressection}
 
 
 \begin{ressection}{EDUCATION}
-	
-	\begin{ressubsec3}{M.S. in Computer Science}{Texas A\&M University, College Station}{May 2013}
-	\end{ressubsec3}
-	
-	\begin{ressubsec3}{B. Tech. in Computer Science and Engineering}{NIT-Durgapur, India}{May 2008}
-	\end{ressubsec3}
-	
+
+  \begin{ressubsec3}{M.S. in Computer Science}{Texas A\&M University, College Station}{May 2013}
+  \end{ressubsec3}
+
+  \begin{ressubsec3}{B. Tech. in Computer Science and Engineering}{NIT-Durgapur, India}{May 2008}
+  \end{ressubsec3}
+
 \end{ressection}
 
 \begin{ressection}{PUBLICATIONS}
-	
-	\resitem{Pradeep Garigipati, Ergun Akleman: Duotone Surfaces. International Symposium on Computational Aesthetics in Graphics, Visualization, and Imaging, 2012. Annecy, France. 99-106.}
-	
-	\resitem{Yufeng Zhu, Pradeep Garigipati, Pieter Peers, Paul Debevec and Abhijeet Ghosh. Estimating Diffusion Parameters from Polarized Spherical GradientIllumination. IEEE Computer Graphics and Applications, 2013.}
-	
+
+  \resitem{Pradeep Garigipati, Ergun Akleman: Duotone Surfaces. International Symposium on Computational Aesthetics in Graphics, Visualization, and Imaging, 2012. Annecy, France. 99-106.}
+
+  \resitem{Yufeng Zhu, Pradeep Garigipati, Pieter Peers, Paul Debevec and Abhijeet Ghosh. Estimating Diffusion Parameters from Polarized Spherical Gradient Illumination. IEEE Computer Graphics and Applications, 2013.}
+
 \end{ressection}
 
 \end{document}
